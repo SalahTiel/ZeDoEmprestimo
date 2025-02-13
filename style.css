@@ -291,6 +291,8 @@ section.solutions div.wrapper div.card{
 }
 section.solutions div.wrapper div.card img{
     width: 80vw;
+    height: auto;
+    display: block;
     border-radius: 20px 20px 0px 0px;
 }
 section.solutions div.wrapper div.card div.text{
