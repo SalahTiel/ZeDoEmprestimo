@@ -1,0 +1,175 @@
+@media screen and (min-width: 1280px){
+    header nav{
+        display: flex;
+    }
+
+
+    header,
+    section.home,
+    section.cards,
+    section.about,
+    section.comments,
+    section.numbers,
+    section.solutions,
+    footer{
+        padding-inline: 15vw;
+    }
+
+
+
+    section.home div.text{
+        width: 40%;
+        text-align: left;
+        border: none;
+        padding: none;
+        background-color: transparent;
+    }
+    section.home div.text h1{
+        font-size: 4rem;
+    }
+    section.home div.text p{
+        font-size: 2rem;
+    }
+
+
+
+    section.cards div.wrapper{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    section.cards div.wrapper{
+        height: 300px;
+    }
+    section.cards div.wrapper div.card p.title,
+    section.cards div.wrapper div.card p.description{
+        font-size: 1.5rem;
+    }
+    
+
+
+    section.about{
+        flex-direction: row;
+    }
+    section.about div.text{
+        order: 2;
+    }
+    section.about div.text h2{
+        font-size: 2.5rem;
+        text-align: left;
+    }
+    section.about div.text p{
+        font-size: 1.3rem;
+    }
+    section.about img{
+        order: 1;
+        width: 40%;
+    }
+
+
+    section.comments{
+        overflow: hidden;
+    }
+    section.comments h2{
+        font-size: 2.5rem;
+    }
+    section.comments p.subtitle{
+        font-size: 1.3rem;
+    }
+    section.comments div.carousel{
+        width: 100%;
+        overflow: hidden;
+    }
+    section.comments div.carousel div.carousel-content{
+        gap: 2vw;
+    }
+    section.comments div.carousel div.carousel-content div.card-comment{
+        width: 21.74vw;
+        height: 35vh
+    }
+
+
+
+    section.numbers h2{
+        font-size: 2.5rem;
+    }
+    section.numbers div.icons{
+        flex-direction: row;
+    }
+    section.numbers div.icons div.wrapper{
+        margin-top: 10vh;
+    }
+
+    
+
+    section.solutions h2{
+        font-size: 2.5rem;
+    }
+    section.solutions div.wrapper{
+        flex-direction: row;
+        justify-content: center;
+        gap: 5vw;
+    }
+    section.solutions div.wrapper div.card img{
+        width: 25vw;
+    }
+    section.solutions div.wrapper div.card div.text p.name{
+        font-size: 1.3rem;
+    }
+    section.solutions div.wrapper div.card div.text p.description{
+        font-size: 1rem;
+    }
+
+
+
+    section.contact img.background{
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        object-position: center;
+    }
+    section.contact h2{
+        font-size: 2.5rem;
+        top: 30vh;
+    }
+    section.contact div.wrapper{
+        padding: 6rem;
+        margin-inline: 15vw;
+        top: 50vh;
+    }
+    section.contact div.wrapper h3{
+        font-size: 1.5rem;
+    }
+    section.contact div.wrapper div.content{
+        flex-direction: row;
+        gap: 6rem;
+    }
+    section.contact div.wrapper div.content div.link-content p.paragraph{
+        font-size: 1rem;
+    }
+    section.contact div.wrapper div.content div.link-content a p{
+        font-size: 1rem;
+    }
+    section.contact div.wrapper div.content form input,
+    section.contact div.wrapper div.content form textarea{
+        margin-top: 2rem;
+    }
+
+
+
+    section.location{
+        flex-direction: row;
+    }
+    section.location div.text{
+        padding-inline: 6vw;
+    }
+
+
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer div.wrapper{
+        margin-top: 0;
+    }
+}
