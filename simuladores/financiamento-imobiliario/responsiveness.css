@@ -1,0 +1,25 @@
+@media screen and (min-width: 1280px) {
+    
+    header nav.desktop{
+        display: flex;
+    }
+    header div.mobile-menu, div.mobile-navigation{
+        display: none;
+    }
+
+
+
+    div.cover{
+        height: 30vh;
+    }
+    div.cover div.text{
+        top: 50%;
+    }
+
+
+
+    section.form form{
+        padding-inline: 10vw;
+    }
+}
+

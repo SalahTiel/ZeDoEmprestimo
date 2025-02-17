@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveness.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image/x-icon">
+    <title>Zé do Empréstimo | Simulação</title>
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="../../assets/logo.png" alt="logotipo">
+
+        <nav class="desktop">
+            <a href="/#home">Home</a>
+            <a href="/#sobre">Sobre</a>
+            <a href="/#solucoes">Soluções</a>
+            <a href="/#contato">Contato</a>
+            <a href="">FAQ</a>
+        </nav>
+
+        <div onclick="toggleMenu()" class="mobile-menu">
+            <img src="../../assets/icon-menu.png" alt="">
+        </div>
+    </header>
+
+    <div class="mobile-navigation">
+        <img onclick="toggleMenu()" src="../../assets/icon-close.png" alt="">
+        <nav>
+            <a onclick="toggleMenu()" href="/#home">Home</a>
+            <a onclick="toggleMenu()" href="/#sobre">Sobre</a>
+            <a onclick="toggleMenu()" href="/#solucoes">Soluções</a>
+            <a onclick="toggleMenu()" href="/#contato">Contato</a>
+            <a onclick="toggleMenu()" href="">FAQ</a>
+        </nav>
+    </div>
+
+
+
+    <div class="cover">
+        <img src="../../assets/img-solutions1.jpg" alt="">
+        <div class="text">
+            <h1>Financiamento Imobiliário - SFH</h1>
+            <p>Simule crédito habitacional através dos principais bancos</p>
+        </div>
+
+    </div>
+
+    <section class="form">
+        <p class="legend">Simule aqui:</p>
+
+        <form action="">
+            <input type="text" id="name" name="nome" placeholder="Nome Completo">
+            <input type="number" placeholder="CPF">
+            <div class="checkbox">
+                <input id="incluirDepois" type="checkbox">
+                <label for="incluirDepois">Incluir depois</label>
+            </div>
+            <input type="tel" placeholder="Telefone">
+            <input type="number" placeholder="Crédito Pretendido">
+            <p class="obs">* entre R$50.000,00 e R$5.000.000,00</p>
+        </form>
+        <div class="buttons">
+            <button>Incluir Proposta</button>
+            <button class="send">Receber Contato</button>
+        </div>
+
+        <a class="saberMais" href=""><img src="../../assets/icon-info.png" alt=""><p>Saber Mais</p></a>
+
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

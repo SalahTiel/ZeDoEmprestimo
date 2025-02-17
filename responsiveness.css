@@ -1,8 +1,4 @@
 @media screen and (min-width: 1280px){
-    header nav{
-        display: flex;
-    }
-
 
     header,
     section.home,
@@ -13,6 +9,15 @@
     section.solutions,
     footer{
         padding-inline: 15vw;
+    }
+
+
+
+    header nav.desktop{
+        display: flex;
+    }
+    header div.mobile-menu, div.mobile-navigation{
+        display: none;
     }
 
 
