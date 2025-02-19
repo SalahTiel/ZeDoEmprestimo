@@ -142,7 +142,9 @@
         top: 50vh;
     }
     section.contact div.wrapper h3{
-        font-size: 1.5rem;
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 2rem;
     }
     section.contact div.wrapper div.content{
         flex-direction: row;

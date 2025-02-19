@@ -393,8 +393,11 @@ section.contact div.wrapper{
 }
 section.contact div.wrapper h3{
     text-align: center;
-    font: 700 1rem 'Poppins';
+    font: 700 2rem 'Poppins';
     color: white;
+}
+section.contact div.wrapper h3 span{
+    color: #3D7D37;
 }
 section.contact div.wrapper div.content{
     display: flex;
