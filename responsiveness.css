@@ -54,16 +54,18 @@
 
     section.about{
         flex-direction: row;
-    }
-    section.about div.text{
-        order: 2;
+        background-position: 0% 0%;
     }
     section.about div.text h2{
         font-size: 2.5rem;
         text-align: left;
+        width: 50%;
+        margin-left: auto;
     }
     section.about div.text p{
         font-size: 1.3rem;
+        width: 50%;
+        margin-left: auto;
     }
     section.about img{
         order: 1;

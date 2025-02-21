@@ -167,21 +167,20 @@ section.cards div.wrapper div.card p.description{
 
 
 section.about{
-    padding: 10vh 10vw;
-    display: flex;
-    flex-direction: column;
-    gap: 5vh;
-    background-color: #E4E4E4;
+    padding: 20vh 10vw;
+    background: url(assets/img-about.png);
+    background-position: 30% 0%;
     border: 1px solid white;
 }
 section.about div.text h2{
     font: 700 1.5rem "Poppins";
     text-align: center;
-    color: #03311C;
+    color: white;
 }
 section.about div.text p{
     margin-top: 2rem;
     font: 300 1rem "Poppins";
+    color: white;
 }
 section.about img{
     width: 100%;
@@ -489,6 +488,9 @@ section.location div.text p{
     font: 400 1rem 'Poppins';
     color: black;
     margin-top: 1rem;
+}
+section.location div.text p.loc span{
+    font-weight: 700;
 }
 section.location iframe{
     width: 100%;
