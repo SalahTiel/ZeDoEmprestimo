@@ -1,0 +1,117 @@
+section.faq{
+    padding: 25vh 10vw;
+}
+section.faq header{
+    position: fixed;
+    top: -2px;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #03311C;
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.26);
+}
+section.faq header nav{
+    display: none;
+    gap: 1rem;
+    align-items: center;
+}
+section.faq header nav a{
+    color: white;
+    font: 400 0.8rem 'Poppins';
+}
+section.faq header nav a:hover{
+    color: #3D7D37;
+}
+section.faq img.logo{
+    width: 10rem;
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+section.faq a.receiveContact{
+    padding: 1rem;
+    color: #03311C;
+    background-color: white;
+    border-radius: 10px;
+}
+section.faq a.receiveContact:hover{
+    background-color: #3D7D37;
+    transition: all 300ms;
+}
+section.faq div.section{
+    margin-top: 10vh;
+}
+section.faq h1{
+    font: 700 1.5rem 'Poppins';
+}
+section.faq h2{
+    font: 700 1.3rem 'Poppins';
+}
+section.faq p.paragraph{
+    font: 400 1rem 'Poppins';
+    margin-top: 1rem;
+}
+section.faq iframe.video{
+    margin-top: 4rem;
+    border-radius: 20px;
+    width: 80vw;
+    height: 30vh;
+    display: block;
+    margin-inline: auto;
+}
+section.faq div.questions{
+    margin-top: 4rem;
+}
+section.faq div.questions details{
+    margin-top: 2rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+    text-align: left;
+}
+section.faq div.questions details summary{
+    font: 700 1rem 'Poppins';
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+section.faq div.questions details p{
+    font: 400 1rem 'Poppins';
+    color: black;
+    margin-top: 1rem;
+}
+section.faq div.questions details p span.bold{
+    font-weight: 700;
+}
+section.faq div.questions details summary::marker{
+    content: "";
+    font-size: 0;
+    color: transparent;
+    opacity: 0;
+}
+section.faq div.questions details summary span::after{
+    content: '+';
+}
+section.faq div.questions details[open] summary span::after{
+    content: "-";
+}
+section.faq div.questions details summary::-webkit-details-marker {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 1280px){
+    section.faq{
+        padding-inline: 15vw;
+    }
+    section.faq header nav{
+        display: flex;
+    }
+    section.faq iframe.video{
+        width: 100%;
+        height: 60vh;
+    }
+}
