@@ -1,8 +1,14 @@
 import style from'./FAQ.module.css'
 
+import ContactForm from '../../components/ContactForm/ContactForm'
+
+import { useState } from 'react'
+
 import logo from '../../assets/logo.png'
 
 function FAQ () {
+    const [toggleContact, setToggleContact] = useState(false)
+
     return(
     <section className={style.faq}>
         <header>
@@ -14,7 +20,6 @@ function FAQ () {
                 <a href="#imovel">Imóvel</a>
                 <a href="#amortizacao">Amortização</a>
                 <a href="#etapas">Etapas</a>
-                <a className={style.receiveContact}>Receber Contato</a>
             </nav>
         </header>
 
@@ -130,7 +135,18 @@ function FAQ () {
             </div>
         </div>
 
-        
+        <div className={style.buttons}>
+            <a href="/simulator">Simulador</a>
+            <a onClick={()=>{setToggleContact(true)}}>Receber Contato</a>
+            <a href="">Incluir Proposta</a>
+        </div>
+
+        {toggleContact && (
+        <>
+            <div onClick={()=>{setToggleContact(false)}} className={style.formBackground}></div>
+            <ContactForm/>
+        </>
+        )}
        
     </section>
     )

@@ -1,0 +1,67 @@
+form.contact{
+    position: fixed;
+    width: 90vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: #03311C;
+    z-index: 2;
+}
+form.contact legend.title{
+    font: 700 1rem 'Poppins';
+    color: white;
+}
+form.contact div.item{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+form.contact div.item label{
+    font: 400 1rem 'Poppins';
+    color: white;
+    margin: 1rem 0 0.5rem;
+}
+form.contact div.item input{
+    padding: 1rem;
+    font: 400 1rem 'Poppins';
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #C5C5C5;
+}
+form.contact button{
+    display: block;
+    text-align: center;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    font: 400 1rem 'Poppins';
+    color: white;
+    background-color: #3D7D37;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+form.contact button:hover{
+    background-color: #03311C;
+    transition: all 300ms;
+}
+form.contact p.title{
+    color: white;
+    font: 700 1.5rem 'Poppins';
+}
+form.contact p.message{
+    color: white;
+    font: 400 1rem 'Poppins';
+    margin-top: 1rem;
+}
+
+
+
+@media screen and (min-width: 1280px){
+    form.contact{
+        width: 50vw;
+    }
+}

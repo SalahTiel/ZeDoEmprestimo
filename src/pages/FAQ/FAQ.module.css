@@ -1,16 +1,19 @@
 section.faq{
-    padding: 25vh 10vw;
+    padding: 25vh 10vw 5vh;
 }
 section.faq header{
-    position: fixed;
+    position: absolute;
     top: -2px;
     left: 0;
     width: 100vw;
     height: 15vh;
     display: flex;
+    padding-inline: 10vw;
     align-items: center;
     justify-content: space-between;
-    background-color: #03311C;
+    background: url(../../assets/img-solutions1.jpg);
+    background-size: cover;
+    background-position: center;
     box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.26);
 }
 section.faq header nav{
@@ -20,35 +23,26 @@ section.faq header nav{
 }
 section.faq header nav a{
     color: white;
-    font: 400 0.8rem 'Poppins';
+    font: 500 0.8rem 'Poppins';
 }
 section.faq header nav a:hover{
     color: #3D7D37;
 }
 section.faq img.logo{
-    width: 10rem;
+    width: 8rem;
     height: auto;
     padding: 1rem;
     border-radius: 10px;
 }
-section.faq a.receiveContact{
-    padding: 1rem;
-    color: #03311C;
-    background-color: white;
-    border-radius: 10px;
-}
-section.faq a.receiveContact:hover{
-    background-color: #3D7D37;
-    transition: all 300ms;
-}
 section.faq div.section{
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
 }
 section.faq h1{
     font: 700 1.5rem 'Poppins';
 }
 section.faq h2{
-    font: 700 1.3rem 'Poppins';
+    font: 700 1.5rem 'Poppins';
 }
 section.faq p.paragraph{
     font: 400 1rem 'Poppins';
@@ -101,10 +95,41 @@ section.faq div.questions details summary::-webkit-details-marker {
     display: none;
 }
 
+section.faq div.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+ }
+section.faq div.buttons a{
+    font: 400 0.8rem 'Poppins';
+    background-color: #03311C;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+section.faq div.buttons a:hover{
+    background-color: #3D7D37;
+    transition: all 300ms;
+}
 
+
+
+div.formBackground{
+    position: fixed;
+    left: 0;
+    top: -1vh;
+    width: 100vw;
+    height: 102vh;
+    background-color: rgba(0, 0, 0, 0.74);
+    z-index: 2;
+}
 
 @media screen and (min-width: 1280px){
     section.faq{
+        padding-inline: 15vw;
+    }
+    section.faq header{
         padding-inline: 15vw;
     }
     section.faq header nav{
@@ -114,4 +139,10 @@ section.faq div.questions details summary::-webkit-details-marker {
         width: 100%;
         height: 60vh;
     }
+    section.faq div.buttons{
+        position: fixed;
+        top: 50%;
+        right: 1vw;
+        transform: translateY(-40%);
+     }
 }

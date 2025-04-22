@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 import Map from '../components/map'
 
-import logo from '../assets/logo.png'
+import logo from '../assets/logo2.png'
 import openMenu from '../assets/icon-menu.png'
 import closeMenu from '../assets/icon-close.png'
 import goal from '../assets/icon-goal.png'
@@ -82,6 +82,7 @@ const Home = () => {
             <a href="#sobre">Sobre</a>
             <a href="#solucoes">Soluções</a>
             <a href="#contato">Contato</a>
+            <a href="/login">Área do Colaborador</a>
         </nav>
 
         <div onClick={()=>{toggleMenu()}} className={style.mobileMenu}>
@@ -96,6 +97,7 @@ const Home = () => {
             <a onClick={()=>{toggleMenu()}} href="#sobre">Sobre</a>
             <a onClick={()=>{toggleMenu()}} href="#solucoes">Soluções</a>
             <a onClick={()=>{toggleMenu()}} href="#contato">Contato</a>
+            <a href="/login">Área do Colaborador</a>
         </nav>
         </div>
 
