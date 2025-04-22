@@ -29,7 +29,7 @@ return(
     <div className={style.buttons}>
         <a href="/simulator">Simulador</a>
         <a onClick={(e)=>{setToggleContact(!toggleContact)}}>Receber Contato</a>
-        <a href="">Incluir Proposta</a>
+        <a href="/incluir-proposta">Incluir Proposta</a>
         <a href="/faq">Saber mais</a>
     </div>
 
