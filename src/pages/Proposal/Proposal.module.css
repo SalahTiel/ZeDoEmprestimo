@@ -1,55 +1,13 @@
-.simulatorHeader{
-    padding: 1rem 10vw;
-    background: url(../../assets/img-solutions1.jpg) ;
-    background-size: cover;
-    background-position: center;
-}
-.simulatorHeader a img{
-    width: 8rem;
-}
-
-
-section.simulator{
-    padding: 10vh 10vw;
-}
-section.simulator h2{
-    font: 700 1.5rem 'Poppins';
-    margin-bottom: 1rem;
-}
-section.simulator form div.item{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-section.simulator form div.item label{
-    font: 400 1rem 'Poppins';
-    color: black;
-    margin: 1rem 0 0.5rem;
-}
-section.simulator form div.item input{
-    padding: 1rem;
-    font: 400 1rem 'Poppins';
-    color: black;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    background-color: #C5C5C5;
-}
-section.simulator form p.legend{
-    font: 400 1rem 'Poppins';
-    color: black;
-    margin-top: 2rem;
-}
-section.simulator form div.option{
+section.simulator div.proposal form div.option{
     display: flex;
     gap: 0.5rem;
     align-items: center;
     margin-top: 0.5rem;
 }
-section.simulator form div.option input{
+section.simulator div.proposal form div.option input{
     display: none;
 }
-section.simulator form div.option label.box{
+section.simulator div.proposal form div.option label.box{
     width: 2rem;
     height: 2rem;
     border-radius: 0.5rem;
@@ -71,58 +29,59 @@ section.simulator form div.option input:checked + label.box img{
 section.simulator form div.option p{
     font: 400 1rem 'Poppins';
 }
-section.simulator div.buttons{
+section.simulator form div.item{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 2rem;
+    align-items: left;
 }
-section.simulator div.buttons button,
-section.simulator div.buttons a{
-    display: block;
+section.simulator form div.item label{
+    font: 400 1rem 'Poppins';
+    color: black;
+    margin: 1rem 0 0.5rem;
+}
+section.simulator form div.item input{
     padding: 1rem;
+    font: 400 1rem 'Poppins';
+    color: black;
+    outline: none;
     border: none;
     border-radius: 10px;
-    text-align: center;
-    font: 500 1rem 'Poppins';
-    color: white;
-    background-color: #03311C;
-}
-section.simulator div.buttons button:hover,
-section.simulator div.buttons a:hover{
-    background-color: #3D7D37;
-    transition: all 300ms;
-}
-
-
-
-section.simulator div.proposal{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    height: 90vh;
-    border-radius: 20px;
     background-color: #C5C5C5;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
-    overflow: hidden;
-    z-index: 2;
 }
-section.simulator div.proposal img.close{
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    margin: 2rem 2rem 0 auto;
+
+
+
+section.simulator{
+    padding: 10vh 5vw;
+}
+section.simulator header{
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    padding-inline: 10vw;
+    align-items: center;
+    justify-content: space-between;
+    background: url(../../assets/img-solutions1.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.26);
+}
+section.simulator img.logo2{
+    width: 8rem;
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
 }
 section.simulator div.proposal h3{
     font: 700 1.5rem 'Poppins';
     text-align: center;
     margin-block: 1rem;
+    margin-top: 10vh;
 }
 section.simulator div.proposal form{
-    padding: 2rem;
-    max-height: 70vh;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -218,8 +177,11 @@ section.simulator div.proposal div.file ul li img,
 section.simulator div.proposal div.file div.doc img{
     width: 1.5rem;
     height: auto;
+    filter: brightness(0);
 }
-section.simulator button.send{
+section.simulator a.send{
+    display: block;
+    width: fit-content;
     border: none;
     border-radius: 10px;
     margin-top: 2rem;
@@ -232,7 +194,6 @@ section.simulator div.proposal button.send:hover{
     background-color: #3D7D37;
     transition: all 300ms;
 }
-section.simulator div.background,
 section.simulator div.contactPopUp div.background{
     position: fixed;
     top: -1vh;
@@ -262,8 +223,6 @@ section.simulator div.contactPopUp div.wrapper p.message{
     margin-top: 1rem;
 }
 
-
-
 div.formBackground{
     position: fixed;
     left: 0;
@@ -273,36 +232,40 @@ div.formBackground{
     background-color: rgba(0, 0, 0, 0.74);
     z-index: 2;
 }
-/*====================================================================*/
+section.simulator div.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem;
+ }
+section.simulator div.buttons a{
+    font: 400 1rem 'Poppins';
+    background-color: #03311C;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+section.simulator div.buttons a:hover{
+    background-color: #3D7D37;
+    transition: all 300ms;
+}
+
+
 
 @media screen and (min-width: 1280px) {
-    .simulatorHeader{
-        padding: 1rem 15vw;
-    }
-
-    section.simulator{
+    section.simulator div.proposal{
         padding: 10vh 15vw;
     }
-    section.simulator h2{
-        text-align: center;
-    }
-    section.simulator div.proposal{
-        width: 70vw;
+    section.simulator div.contactPopUp div.wrapper{
+        width: 40vw;
     }
     section.simulator div.buttons{
         flex-direction: row;
         justify-content: center;
-        gap: 0.5rem;
     }
     section.simulator div.buttons button,
     section.simulator div.buttons a{
         width: 15rem;
     }
-    section.simulator div.proposal{
-        padding: 5vh 10vw;
-    }
-    section.simulator div.contactPopUp div.wrapper{
-        width: 40vw;
-    }
-    
 }

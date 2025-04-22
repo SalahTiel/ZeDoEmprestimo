@@ -138,7 +138,7 @@ function FAQ () {
         <div className={style.buttons}>
             <a href="/simulator">Simulador</a>
             <a onClick={()=>{setToggleContact(true)}}>Receber Contato</a>
-            <a href="">Incluir Proposta</a>
+            <a href="/incluir-proposta">Incluir Proposta</a>
         </div>
 
         {toggleContact && (
