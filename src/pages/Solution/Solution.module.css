@@ -5,8 +5,8 @@
     padding: 5vh 10vw;
 }
 .header img{
-    width: 6rem;
-    height: auto;
+    height: 13vh;
+    width: auto;
 }
 
 
@@ -84,15 +84,15 @@ div.formBackground{
         font-size: 1.5rem;
     }
 
-
-
     div.buttons{
-        padding-inline: 15vw;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1rem;
+        padding: 0;
+        position: fixed;
+        top: 50%;
+        right: 1vw;
+        transform: translateY(-40%);
     }
     div.buttons a{
         width: 100%;
+        font: 400 0.8rem 'Poppins';
     }
 }

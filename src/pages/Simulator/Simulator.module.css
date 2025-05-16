@@ -5,7 +5,8 @@
     background-position: center;
 }
 .simulatorHeader a img{
-    width: 8rem;
+    height: 13vh;
+    width: auto;
 }
 
 
@@ -290,13 +291,15 @@ div.formBackground{
         width: 70vw;
     }
     section.simulator div.buttons{
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.5rem;
+        position: fixed;
+        top: 50%;
+        right: 1vw;
+        transform: translateY(-40%);
     }
     section.simulator div.buttons button,
     section.simulator div.buttons a{
-        width: 15rem;
+        width: 100%;
+        font-size: 0.8rem;
     }
     section.simulator div.proposal{
         padding: 5vh 10vw;

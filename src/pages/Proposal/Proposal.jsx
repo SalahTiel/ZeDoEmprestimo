@@ -1,6 +1,7 @@
 import style from './Proposal.module.css'
 
 import ContactForm from '../../components/ContactForm/ContactForm'
+import { useParams } from 'react-router-dom'
 
 import check from '../../assets/icon-check.svg'
 import doc from '../../assets/icon-doc.svg'
@@ -9,6 +10,8 @@ import logo2 from '../../assets/logo2.png'
 import { useState } from "react"
 
 function Proposal (){
+    const {id} = useParams()
+
     const [inputName, setInputName] = useState('')
     const [inputCPF, setInputCPF] = useState()
     const [inputTel, setInputTel] = useState()
@@ -535,9 +538,9 @@ function Proposal (){
             </div>)}
 
             <div className={style.buttons}>
-                <a href="/simulator">Simulador</a>
+                <a href={`/simulator/${id}`}>Simulador</a>
                 <a onClick={()=>{setToggleContact(true)}}>Receber Contato</a>
-                <a href="/FAQ">Saber Mais</a>
+                <a href={`/faq/${id}`}>Saber Mais</a>
             </div>
 
             {toggleContact && (

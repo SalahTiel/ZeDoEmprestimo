@@ -12,12 +12,12 @@ import Proposal from './pages/Proposal/Proposal.jsx'
 
 const router = createBrowserRouter([
   {path:"/", element:<Home/>},
-  {path:'/solucao', element:<Solution/>},
-  {path:'/FAQ', element:<FAQ/>},
-  {path:'/simulator', element:<Simulator/>},
+  {path:'/solucao/:id', element:<Solution/>},
+  {path:'/FAQ/:id', element:<FAQ/>},
+  {path:'/simulator/:id', element:<Simulator/>},
+  {path:'/incluir-proposta/:id', element:<Proposal/>},
   {path:'/login', element:<Login/>},
-  {path:'/colaboradores', element:<Team/>},
-  {path:'/incluir-proposta', element:<Proposal/>}
+  {path:'/colaboradores', element:<Team/>}
 ])
 
 createRoot(document.getElementById('root')).render(

@@ -70,10 +70,8 @@ section.simulator header{
     box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.26);
 }
 section.simulator img.logo2{
-    width: 8rem;
-    height: auto;
-    padding: 1rem;
-    border-radius: 10px;
+    height: 13vh;
+    width: auto;
 }
 section.simulator div.proposal h3{
     font: 700 1.5rem 'Poppins';
@@ -254,6 +252,9 @@ section.simulator div.buttons a:hover{
 
 
 @media screen and (min-width: 1280px) {
+    section.simulator header{
+        padding-inline: 15vw;
+    }
     section.simulator div.proposal{
         padding: 10vh 15vw;
     }
@@ -261,11 +262,14 @@ section.simulator div.buttons a:hover{
         width: 40vw;
     }
     section.simulator div.buttons{
-        flex-direction: row;
-        justify-content: center;
+        position: fixed;
+        top: 50%;
+        right: 1vw;
+        transform: translateY(-40%);
     }
     section.simulator div.buttons button,
     section.simulator div.buttons a{
-        width: 15rem;
+        width: 100%;
+        font-size: 0.8rem;
     }
 }

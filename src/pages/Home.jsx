@@ -1,6 +1,9 @@
 import style from './Home.module.css'
 import { useEffect, useState } from 'react'
 
+import { collection, query, where, getDocs } from "firebase/firestore";
+import {db} from "../services/firebase.config"
+
 import Map from '../components/map'
 
 import logo from '../assets/logo2.png'
@@ -69,6 +72,28 @@ const Home = () => {
     function previousComment () {
         setCurrentIndex((currentIndex === card.length - 1) ? 0 : currentIndex + 1)
     }
+
+
+    //Solutions
+    const [solutionsData, setSolutionsData] = useState([])
+    useEffect(()=>{
+        getSolutions()
+    },[])
+
+
+    async function getSolutions () {
+        const q = query(collection(db, "solucoes"));
+        const querySnapshot = await getDocs(q);
+        let list = []
+        querySnapshot.forEach((doc) => {
+        // doc   .data() is never undefined for query doc snapshots
+            list.push({
+            id: doc.id,
+            ...doc.data()})
+        });
+        setSolutionsData([...list])
+    }
+    
 
 
 
@@ -230,23 +255,16 @@ const Home = () => {
         <section id="solucoes" className={style.solutions}>
         <h2>Nossas Soluções</h2>
         <div className={style.wrapper}>
-            <div className={style.card}>
-                <img src="assets/img-solutions1.jpg" alt=""/>
-                <div className={style.text}>
-                    <p className={style.name}>Financiamento Imobiliário - SFH</p>
-                    <p className={style.description}>Realize o sonho de ter a casa própria</p>
+            {solutionsData.map((doc)=>(
+                <div className={style.card} key={doc.id}>
+                    <img src="assets/img-solutions1.jpg" alt=""/>
+                    <div className={style.text}>
+                        <p className={style.name}>{doc.titulo}</p>
+                        <p className={style.description}>{doc.subtitulo}</p>
+                    </div>
+                    <a href={`/solucao/${doc.id}`}>Faça uma Simulação</a>
                 </div>
-                <a href="/solucao">Faça uma Simulação</a>
-            </div>
-
-            <div className={style.card}>
-                <img src="assets/img-solutions2.jpg" alt=""/>
-                <div className={style.text}>
-                    <p className={style.name}>Crédito com Garantia de Imóvel</p>
-                    <p className={style.description}>Use o seu imóvel para conseguir dinheiro</p>
-                </div>
-                <a href="">Faça uma Simulação</a>
-            </div>
+            ))}
         </div>
         </section>
 

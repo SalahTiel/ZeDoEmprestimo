@@ -2,6 +2,8 @@ import style from './Simulator.module.css'
 
 import ContactForm from '../../components/ContactForm/ContactForm'
 
+import {useParams} from 'react-router-dom'
+
 import { useState } from 'react'
 import close from '../../assets/icon-close.png'
 import check from '../../assets/icon-check.svg'
@@ -11,6 +13,7 @@ import logo2 from '../../assets/logo2.png'
 
 
 function Simulator () {
+    const {id} = useParams()
     const [toggleProposal, setToggleProposal] = useState(false)
 
     const [inputName, setInputName] = useState('')
@@ -101,9 +104,9 @@ function Simulator () {
         </form>
 
         <div className={style.buttons}>
-            <a href="incluir-proposta">Incluir Proposta</a>
+            <a href={`/incluir-proposta/${id}`}>Incluir Proposta</a>
             <button onClick={()=>{setToggleContact(true)}}>Receber Contato</button>
-            <a href="/FAQ">Saber Mais</a>
+            <a href={`/faq/${id}`}>Saber Mais</a>
         </div>
         
         {popUpOpen && (

@@ -27,7 +27,7 @@ function ContactForm (){
 
         <div className={style.item}>
             <label htmlFor="name">Telefone</label>
-            <input name="nome" type="number"/>
+            <input name="nome" type="tel"/>
         </div>
 
         <button onClick={sendEmail}>Enviar Contato</button>

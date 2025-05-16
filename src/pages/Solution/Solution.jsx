@@ -1,12 +1,38 @@
 import style from'./Solution.module.css'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import {useParams} from "react-router-dom"
+
+import {db} from '../../services/firebase.config.js'
+import { collection, doc, getDoc } from "firebase/firestore";
 
 import ContactForm from '../../components/ContactForm/ContactForm.jsx'
 import logo from '../../assets/logo2.png'
 
 function Solution () {
+    const {id} = useParams()
+    const [title, setTitle] = useState('')
+    const [subtitle, setSubtitle] = useState('')
+    const [text, setText] = useState('')
     const [toggleContact, setToggleContact] = useState(false)
+
+    useEffect(()=>{
+        getData()
+    }, [])
+
+    async function getData(){
+        const docRef = doc(db, "solucoes", id)
+        const docSnap = await getDoc(docRef)
+
+        if(docSnap.exists()){
+            const data = docSnap.data()
+            setTitle(data.titulo)
+            setSubtitle(data.subtitulo)
+            setText(data.texto)
+        } else{
+            console.log('falha ao carregar conteúdo. Tente novamente')
+        }
+    }
     
 
 return(
@@ -18,19 +44,18 @@ return(
     </header>
 
     <section className={style.post}>
-        <h1>Title</h1>
+        <h1>{title}</h1>
 
-        <h2>Subtitle</h2>
+        <h2>{subtitle}</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet molestie ipsum, ut dapibus lorem volutpat et. Duis elementum risus molestie dolor ultricies, dictum eleifend sapien consequat. Pellentesque venenatis convallis orci non molestie. Aenean vel risus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam aliquet cursus pellentesque. Proin quis tortor in ligula blandit efficitur sit amet eu elit. Quisque tincidunt, elit molestie blandit sagittis, lacus nisl semper lectus, facilisis cursus quam elit et massa. Sed et efficitur risus. Nulla posuere, nisi ut scelerisque mattis, orci mi euismod orci, et placerat dolor elit vitae lacus. Ut dapibus in nibh in vulputate. Mauris bibendum turpis vel arcu congue mollis. Duis interdum ipsum egestas tellus accumsan aliquet. Aliquam eu ultrices metus. Nunc facilisis massa libero, in iaculis nunc iaculis at. Nulla convallis dolor quam, at tincidunt eros commodo ac.
-            Donec eu aliquet libero.</p>
+        <p>{text}</p>
     </section>
 
     <div className={style.buttons}>
-        <a href="/simulator">Simulador</a>
+        <a href={`/simulator/${id}`}>Simulador</a>
         <a onClick={(e)=>{setToggleContact(!toggleContact)}}>Receber Contato</a>
-        <a href="/incluir-proposta">Incluir Proposta</a>
-        <a href="/faq">Saber mais</a>
+        <a href={`/incluir-proposta/${id}`}>Incluir Proposta</a>
+        <a href={`/faq/${id}`}>Saber mais</a>
     </div>
 
     {toggleContact && (

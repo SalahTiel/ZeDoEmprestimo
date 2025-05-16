@@ -23,7 +23,7 @@ a{
     padding-inline:10vw;
 }
 .header img.logo{
-    height: 10vh;
+    height: 13vh;
     width: auto;
 }
 .header nav.desktop{
@@ -317,25 +317,25 @@ section.solutions h2{
     text-align: center;
     font: 700 1.5rem 'Poppins';
     color: #03311C;
+    margin-bottom: 5vh;
 }
 section.solutions div.wrapper{
     display: flex;
     flex-direction: column;
 }
 section.solutions div.wrapper div.card{
-    margin-top: 5vh;
+    position: relative;
+    margin-top: 2rem;
     border-radius: 20px;
     background-color: #E4E4E4;
 }
 section.solutions div.wrapper div.card img{
-    width: 80vw;
     height: auto;
     display: block;
     border-radius: 20px 20px 0px 0px;
 }
 section.solutions div.wrapper div.card div.text{
     padding: 1rem;
-    height: max-content;
 }
 section.solutions div.wrapper div.card div.text p.name{
     text-align: center;
@@ -347,13 +347,15 @@ section.solutions div.wrapper div.card div.text p.description{
     color: black;
     font: 400 0.8rem 'Poppins';
     margin-top: 1rem;
+    margin-bottom: 5rem;
 }
 section.solutions div.wrapper div.card  a{
+    position: absolute;
+    bottom: 0;
     display: block;
     width: 100%;
     padding: 1rem;
     margin-inline: auto;
-    margin-top: 1rem;
     text-align: center;
     font: 700 1rem 'Poppins';
     color: white;
@@ -658,12 +660,15 @@ footer div.wrapper div a{
         font-size: 2.5rem;
     }
     section.solutions div.wrapper{
+        display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 5vw;
+        gap: 2vh 4vw;
+        flex-wrap: wrap;
     }
-    section.solutions div.wrapper div.card img{
-        width: 25vw;
+    section.solutions div.wrapper div.card{
+        width: 20vw;
+        margin-top: 0;
     }
     section.solutions div.wrapper div.card div.text p.name{
         font-size: 1.3rem;

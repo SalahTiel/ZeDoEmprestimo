@@ -29,10 +29,8 @@ section.faq header nav a:hover{
     color: #3D7D37;
 }
 section.faq img.logo{
-    width: 8rem;
-    height: auto;
-    padding: 1rem;
-    border-radius: 10px;
+    height: 13vh;
+    width: auto;
 }
 section.faq div.section{
     margin-top: 5vh;
